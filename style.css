@@ -373,34 +373,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.camera-badge {
-  position: absolute;
-  top: -14px;
-  left: 28px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: #f0d29d;
-  color: #1a120d;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-
-.floating-note {
-  position: absolute;
-  max-width: 220px;
-  padding: 16px 18px;
-  border-radius: 22px;
-  border: 1px solid rgba(240, 210, 157, 0.18);
-  background: rgba(28, 19, 13, 0.8);
-  color: var(--muted);
-  line-height: 1.55;
-  box-shadow: var(--shadow);
-}
-
-.floating-note span,
 .contact-item span,
 .card-content span,
 .service-label {
@@ -411,16 +383,6 @@ a {
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.note-top {
-  top: -60px;
-  right: -40px;
-}
-
-.note-bottom {
-  bottom: 0;
-  left: 0;
 }
 
 .trust-strip {
@@ -521,21 +483,21 @@ a {
 .portrait {
   background:
     linear-gradient(160deg, rgba(13, 10, 8, 0.12), rgba(13, 10, 8, 0.58)),
-    url("imagens/retratos (1).jpg") center/cover no-repeat,
+    url("imagens/retratos (1).jpg") center 24%/cover no-repeat,
     linear-gradient(135deg, #7f5840 0%, #1d140f 100%);
 }
 
 .wedding {
   background:
     linear-gradient(160deg, rgba(13, 10, 8, 0.1), rgba(13, 10, 8, 0.62)),
-    url("imagens/eventos 1.jpg") center/cover no-repeat,
+    url("imagens/eventos 1.jpg") center 18%/cover no-repeat,
     linear-gradient(135deg, #aa835c 0%, #2a1b13 100%);
 }
 
 .brand {
   background:
     linear-gradient(160deg, rgba(13, 10, 8, 0.16), rgba(13, 10, 8, 0.66)),
-    url("imagens/marca_pessoal.png") center/cover no-repeat,
+    url("imagens/marca_pessoal.png") center 22%/cover no-repeat,
     linear-gradient(135deg, #5d412d 0%, #16100d 100%);
 }
 
@@ -1074,32 +1036,30 @@ a {
   }
 
   .hero-visual {
-    min-height: 320px;
+    min-height: 240px;
   }
 
   .camera-stage {
-    inset: 32px 0 22px;
+    inset: 8px 0 0;
   }
 
   .camera-card {
-    padding: 30px 18px 16px;
-    border-radius: 30px;
+    width: min(100%, 360px);
+    padding: 14px;
+    border-radius: 26px;
   }
 
   .camera-card img {
     display: block;
     width: 100%;
-    max-height: 340px;
+    max-height: 250px;
     object-fit: contain;
+    object-position: center top;
   }
 
-  .camera-badge {
-    left: 18px;
-    right: 18px;
-    top: -12px;
-    justify-content: center;
-    text-align: center;
-    padding: 8px 12px;
+  .camera-card::before {
+    inset: 10px;
+    border-radius: 20px;
   }
 
   .hero-actions {
@@ -1112,7 +1072,8 @@ a {
 
   .hero-metrics {
     gap: 12px;
-    margin-top: 28px;
+    margin-top: 24px;
+    margin-bottom: 22px;
   }
 
   .section-heading {
@@ -1144,17 +1105,31 @@ a {
     border-radius: 26px;
   }
 
+  .portrait {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.12), rgba(13, 10, 8, 0.58)),
+      url("imagens/retratos (1).jpg") center 12%/cover no-repeat,
+      linear-gradient(135deg, #7f5840 0%, #1d140f 100%);
+  }
+
+  .wedding {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.1), rgba(13, 10, 8, 0.62)),
+      url("imagens/eventos 1.jpg") center 8%/cover no-repeat,
+      linear-gradient(135deg, #aa835c 0%, #2a1b13 100%);
+  }
+
+  .brand {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.16), rgba(13, 10, 8, 0.66)),
+      url("imagens/marca_pessoal.png") center 14%/cover no-repeat,
+      linear-gradient(135deg, #5d412d 0%, #16100d 100%);
+  }
+
   .card-content {
     right: 18px;
     bottom: 18px;
     left: 18px;
-  }
-
-  .floating-note {
-    position: static;
-    max-width: none;
-    margin-top: 14px;
-    font-size: 0.94rem;
   }
 
   .trust-strip {
@@ -1261,6 +1236,51 @@ a {
 
   .portfolio-card {
     min-height: 250px;
+  }
+
+  .hero-visual {
+    min-height: 220px;
+    margin-top: 10px;
+  }
+
+  .camera-stage {
+    inset: 4px 0 0;
+  }
+
+  .camera-card {
+    width: min(100%, 320px);
+    padding: 12px;
+    border-radius: 24px;
+  }
+
+  .camera-card img {
+    max-height: 220px;
+  }
+
+  .camera-card::before {
+    inset: 9px;
+    border-radius: 18px;
+  }
+
+  .portrait {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.12), rgba(13, 10, 8, 0.58)),
+      url("imagens/retratos (1).jpg") center 10%/cover no-repeat,
+      linear-gradient(135deg, #7f5840 0%, #1d140f 100%);
+  }
+
+  .wedding {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.1), rgba(13, 10, 8, 0.62)),
+      url("imagens/eventos 1.jpg") center 6%/cover no-repeat,
+      linear-gradient(135deg, #aa835c 0%, #2a1b13 100%);
+  }
+
+  .brand {
+    background:
+      linear-gradient(160deg, rgba(13, 10, 8, 0.16), rgba(13, 10, 8, 0.66)),
+      url("imagens/marca_pessoal.png") center 10%/cover no-repeat,
+      linear-gradient(135deg, #5d412d 0%, #16100d 100%);
   }
 
   .card-content {
