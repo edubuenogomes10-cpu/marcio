@@ -421,6 +421,10 @@ a {
   letter-spacing: -0.04em;
 }
 
+.portfolio-title-desktop {
+  display: inline;
+}
+
 .portfolio-title-mobile {
   display: none;
 }
