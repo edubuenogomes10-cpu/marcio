@@ -1087,6 +1087,10 @@ a {
     line-height: 1.04;
   }
 
+  .portfolio-title-break {
+    display: none;
+  }
+
   .about-card,
   .service-card,
   .contact-card {
