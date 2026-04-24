@@ -34,19 +34,6 @@ body {
   overflow-x: hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 72px 72px;
-  opacity: 0.35;
-  pointer-events: none;
-  mask-image: radial-gradient(circle at center, black 45%, transparent 92%);
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -69,7 +56,9 @@ a {
   z-index: 999;
   pointer-events: none;
   overflow: hidden;
-  animation: introFadeOut 3.2s ease forwards;
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .intro-ring {
@@ -102,7 +91,7 @@ a {
   z-index: 20;
   backdrop-filter: blur(18px);
   background: rgba(18, 13, 9, 0.58);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 0;
 }
 
 .nav-container,
@@ -394,8 +383,6 @@ a {
 
 .trust-strip div {
   padding: 18px 20px;
-  border-top: 1px solid rgba(240, 210, 157, 0.12);
-  border-bottom: 1px solid rgba(240, 210, 157, 0.12);
   color: rgba(248, 239, 225, 0.76);
   text-align: center;
 }
@@ -480,12 +467,12 @@ a {
   min-height: 420px;
   border-radius: 34px;
   overflow: hidden;
-  border: 1px solid rgba(240, 210, 157, 0.18);
+  isolation: isolate;
+  border: 0;
   box-shadow: var(--shadow);
   transition:
     transform 240ms ease,
-    box-shadow 240ms ease,
-    border-color 240ms ease;
+    box-shadow 240ms ease;
 }
 
 .portrait {
@@ -606,7 +593,6 @@ a {
 .portfolio-card:hover {
   transform: translateY(-10px) scale(1.01);
   box-shadow: 0 34px 58px rgba(0, 0, 0, 0.34);
-  border-color: rgba(240, 210, 157, 0.3);
 }
 
 .portfolio-card:hover .card-overlay {
