@@ -421,6 +421,10 @@ a {
   letter-spacing: -0.04em;
 }
 
+.portfolio-title-mobile {
+  display: none;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr 0.75fr;
@@ -1087,8 +1091,12 @@ a {
     line-height: 1.04;
   }
 
-  .portfolio-title-break {
+  .portfolio-title-desktop {
     display: none;
+  }
+
+  .portfolio-title-mobile {
+    display: inline;
   }
 
   .about-card,
